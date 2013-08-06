@@ -9,7 +9,7 @@ with open('requirements.txt', 'rb') as f:
                     if not line.startswith('-')]
 
 setup(
-    name="sheepdog_modals",
+    name="sheepdog-visual-styles",
     version=visual_styles.__version__,
     author="The Sheepdog Labs team",
     author_email="development@sheepdog.com",
