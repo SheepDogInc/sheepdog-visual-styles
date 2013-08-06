@@ -1,3 +1,4 @@
 cssselect>=0.8
 lxml>=3.1.0
+beautifulsoup>=3.0.0
 django
