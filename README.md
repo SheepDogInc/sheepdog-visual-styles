@@ -14,9 +14,10 @@ Installation
 2. In your application or site-wide templates directory, add a template
    named `visual_styles/base.html`. This template must contain the stylesheets
    and javascript that are common to all pages on the site, and sufficient to
-   display the registered components. In most cases, you can get away with just
-   extending your site base template and making defining a "content" block
-   inside of the body.
+   display the registered components. Additionally, it will need to contain a
+   `scripts` block for javascript, a `styles` block for CSS, and a `content`
+   block for the HTML content. In most cases, you can get away with just
+   extending your site base template and defining the required blocks.
 3. Include `visual_styles.urls` in your urlconf.
 4. If you would like to regenerate example bootstrap widgets, add a
    `BOOTSTRAP_DOC_DIRECTORY` setting which contains the location of your
