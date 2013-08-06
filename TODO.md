@@ -5,5 +5,5 @@ TODO
   containing sheepdog tables or the like.)
 - Respect the template loaders setting when finding templates.
 - Only allow admins to see the visual style test page in debug mode.
-- Don't duplicate values (ex. don't emit headers at the top level if they
-  are nested in example divs.)
+- Allow a directory to be specified that contains the bootstrap docs, instead
+  of only searching in staticfiles directories.
