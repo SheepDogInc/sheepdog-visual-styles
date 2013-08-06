@@ -16,7 +16,7 @@ class VisualStyleView(View, ContextMixin):
 
     """
 
-    template_prefix = ('visual_style', 'snippets')
+    template_prefix = ('visual_styles', 'snippets')
 
     def get_snippets(self, active_template_filename):
         """Returns a list of dicts, where each dict contains the URL to
@@ -61,7 +61,7 @@ class VisualStyleView(View, ContextMixin):
         if snippets:
             template_name = self.get_template_name(active_template_filename)
         else:
-            template_name = 'visual_style/no_snippets.html'
+            template_name = 'visual_styles/no_snippets.html'
 
         return TemplateResponse(
             request=self.request,

@@ -6,8 +6,8 @@ from django.conf import settings
 
 def find_templates_in_prefix(*directory_parts):
     """Returns a list of all template names that start with the given
-    directory parts (ex. `get_templates_in_apps('visual_style', 'snippets')`
-    retrieves all templates that start with 'visual_style/snippets'.)
+    directory parts (ex. `get_templates_in_apps('visual_styles', 'snippets')`
+    retrieves all templates that start with 'visual_styles/snippets'.)
 
     This function can only search the templates accessed by the `filesystem`
     and `app_directories` loaders, and does not respect the `TEMPLATE_LOADERS`

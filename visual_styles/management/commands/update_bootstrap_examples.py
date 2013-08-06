@@ -128,7 +128,7 @@ def extract_examples_from_directory(directory_path):
     """
 
     chunks = [
-        '{% extends "visual_style/snippet_details.html" %}',
+        '{% extends "visual_styles/snippet_details.html" %}',
         '{% load static %}',
         '{% block scripts %}',
         '{{ block.super }}',
@@ -186,16 +186,16 @@ def up_directories(path, count=0):
 def get_output_path():
     """Returns the path to the file that will hold the collected examples."""
 
-    # We're in visual_style/management/commands/foo.py, so we want to be
+    # We're in visual_styles/management/commands/foo.py, so we want to be
     #  two directories up
-    visual_style_path = up_directories(__file__, count=2)
-    snippet_dirname = os.path.join("templates", "visual_style", "snippets")
-    snippet_directory = os.path.join(visual_style_path, snippet_dirname)
+    visual_styles_path = up_directories(__file__, count=2)
+    snippet_dirname = os.path.join("templates", "visual_styles", "snippets")
+    snippet_directory = os.path.join(visual_styles_path, snippet_dirname)
     return os.path.join(snippet_directory, "bootstrap.html")
 
 
 class Command(BaseCommand):
-    help = 'Updates the bootstrap examples in the visual_style app'
+    help = 'Updates the bootstrap examples in the visual_styles app'
 
     def handle(self, *args, **kwargs):
         input_directory_path = get_bootstrap_doc_directory_path()
