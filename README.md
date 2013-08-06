@@ -18,6 +18,11 @@ Installation
    extending your site base template and making defining a "content" block
    inside of the body.
 3. Include `visual_style.urls` in your urlconf.
+4. If you would like to regenerate example bootstrap widgets, add a
+   `BOOTSTRAP_DOC_DIRECTORY` setting which contains the location of your
+   bootstrap docs relative to a static directory (ex. if you installed the docs
+   in project_root/foo_app/static/bower/bootstrap/docs, then the setting would
+   be `BOOTSTRAP_DOC_DIRECTORY = 'bower/boostrap/docs`.)
 
 
 Registering Components

@@ -17,6 +17,10 @@ HEADER_NESTING = ('h1', 'h2', 'h3', 'h4', 'h5', 'h6')
 
 
 def get_bootstrap_doc_directory():
+    if not hasattr(settings, 'BOOTSTRAP_DOC_DIRECTORY'):
+        raise AttributeError(
+            'You must set the BOOTSTRAP_DOC_DIRECTORY setting')
+
     return settings.BOOTSTRAP_DOC_DIRECTORY.rstrip('/')
 
 
