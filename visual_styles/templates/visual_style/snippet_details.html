@@ -1,0 +1,21 @@
+{% extends "visual_style/base.html" %}
+
+{% load static %}
+
+{% block styles %}
+  {{ block.super }}
+{% endblock %}
+
+{% block content %}
+  <ul class="nav nav-pills">
+    {% for snippet in snippets %}
+      <li {% if snippet.is_active %}class="active"{% endif %}>
+        <a href="{{ snippet.url }}">{{ snippet.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+{% block scripts %}
+  {{ block.super }}
+{% endblock %}
